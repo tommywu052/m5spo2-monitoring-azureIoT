@@ -1,1 +1,1 @@
-## Power Apps and Teams Trigger File
+## Power Apps and Teams Power Automate Trigger File
