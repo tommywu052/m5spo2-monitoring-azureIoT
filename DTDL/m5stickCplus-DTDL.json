@@ -1,0 +1,168 @@
+[
+  {
+    "@id": "dtmi:continuousPatientMonitoringFora:foraSpo23fh;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:foraSpo23fh:manufacture;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "manufacture"
+        },
+        "name": "manufacture",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:foraSpo23fh:SpO2;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "SpO2"
+        },
+        "name": "SpO2",
+        "schema": "double"
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:foraSpo23fh:BPM;1",
+        "@type": "Telemetry",
+        "displayName": {
+          "en": "BPM"
+        },
+        "name": "BPM",
+        "schema": "double"
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:foraSpo23fh:DeviceId;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "DeviceId"
+        },
+        "name": "DeviceId",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:foraSpo23fh:Battery;1",
+        "@type": [
+          "Telemetry",
+          "Voltage"
+        ],
+        "displayName": {
+          "en": "Battery"
+        },
+        "name": "Battery",
+        "schema": "double"
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:foraSpo23fh:activateDevice;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "displayName": {
+          "en": "activate-device"
+        },
+        "name": "activateDevice"
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:foraSpo23fh:led;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "displayName": {
+          "en": "led"
+        },
+        "name": "led",
+        "request": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "ledstate"
+          },
+          "name": "ledstate",
+          "schema": "string"
+        }
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:foraSpo23fh:ledstatus;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "ledstatus"
+        },
+        "name": "ledstatus",
+        "schema": "string",
+        "writable": false
+      }
+    ],
+    "displayName": {
+      "en": "fora-device"
+    },
+    "extends": [
+      "dtmi:continuousPatientMonitoringFora:devicefirmware;1"
+    ],
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:continuousPatientMonitoringFora:devicefirmware;1",
+    "@type": [
+      "Interface",
+      "NamedInterface"
+    ],
+    "contents": [
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:devicefirmware:FWVersion;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "FWVersion"
+        },
+        "name": "FWVersion",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:devicefirmware:SSID;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "SSID"
+        },
+        "name": "SSID",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:devicefirmware:MacAddress;1",
+        "@type": "Property",
+        "displayName": {
+          "en": "MacAddress"
+        },
+        "name": "MacAddress",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:continuousPatientMonitoringFora:devicefirmware:ledcmd;1",
+        "@type": "Command",
+        "commandType": "synchronous",
+        "displayName": {
+          "en": "ledcmd"
+        },
+        "name": "ledcmd",
+        "request": {
+          "@type": "CommandPayload",
+          "displayName": {
+            "en": "ledstate"
+          },
+          "name": "ledstate",
+          "schema": "string"
+        }
+      }
+    ],
+    "displayName": {
+      "en": "devicefirmware"
+    },
+    "name": "foraSpo24g6"
+  }
+]
